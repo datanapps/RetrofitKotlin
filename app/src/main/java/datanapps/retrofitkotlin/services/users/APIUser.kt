@@ -1,9 +1,8 @@
-package datanapps.retrofitopenweatherkotlin.services.users
+package datanapps.retrofitkotlin.services.users
 
-import datanapps.retrofitopenweatherkotlin.services.users.model.BaseUser
+import datanapps.retrofitkotlin.services.users.model.BaseUser
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.QueryMap
 
 /**

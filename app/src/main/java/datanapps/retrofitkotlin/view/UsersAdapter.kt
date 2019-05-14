@@ -1,7 +1,6 @@
-package datanapps.retrofitopenweatherkotlin.view
+package datanapps.retrofitkotlin.view
 
 import android.content.Context
-import android.text.format.DateUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,10 +10,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import datanapps.retrofitopenweatherkotlin.R
-import datanapps.retrofitopenweatherkotlin.services.users.model.User
-import java.sql.Date
-import java.text.SimpleDateFormat
+import datanapps.retrofitkotlin.R
+import datanapps.retrofitkotlin.services.users.model.User
 
 
 class UsersAdapter(private val context: Context, private val userList: List<User>) : RecyclerView.Adapter<UsersAdapter.UserViewHolder>() {

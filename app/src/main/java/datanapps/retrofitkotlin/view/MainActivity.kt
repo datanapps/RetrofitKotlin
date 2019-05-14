@@ -1,17 +1,17 @@
-package datanapps.retrofitopenweatherkotlin.view
+package datanapps.retrofitkotlin.view
 
 import androidx.appcompat.app.AppCompatActivity
-import datanapps.retrofitopenweatherkotlin.R
+import datanapps.retrofitkotlin.R
 
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import datanapps.retrofitopenweatherkotlin.services.network.RetrofitEventListener
-import datanapps.retrofitopenweatherkotlin.services.users.ApiUserRestClient
-import datanapps.retrofitopenweatherkotlin.services.users.model.BaseUser
-import datanapps.retrofitopenweatherkotlin.services.users.model.User
+import datanapps.retrofitkotlin.services.network.RetrofitEventListener
+import datanapps.retrofitkotlin.services.users.ApiUserRestClient
+import datanapps.retrofitkotlin.services.users.model.BaseUser
+import datanapps.retrofitkotlin.services.users.model.User
 import retrofit2.Call
 
 class MainActivity : AppCompatActivity() {

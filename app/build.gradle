@@ -6,7 +6,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "datanapps.retrofitopenweatherkotlin"
+        applicationId "datanapps.retrofitkotlin"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1

@@ -1,4 +1,4 @@
-package datanapps.retrofitopenweatherkotlin.services.network
+package datanapps.retrofitkotlin.services.network
 
 import java.util.concurrent.TimeUnit
 

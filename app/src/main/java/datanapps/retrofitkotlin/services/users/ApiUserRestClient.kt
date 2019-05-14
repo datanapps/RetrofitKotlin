@@ -1,10 +1,10 @@
-package datanapps.retrofitopenweatherkotlin.services.users
+package datanapps.retrofitkotlin.services.users
 
 import java.util.HashMap
 
-import datanapps.retrofitopenweatherkotlin.services.network.NetworkClient
-import datanapps.retrofitopenweatherkotlin.services.network.RetrofitEventListener
-import datanapps.retrofitopenweatherkotlin.services.users.model.BaseUser
+import datanapps.retrofitkotlin.services.network.NetworkClient
+import datanapps.retrofitkotlin.services.network.RetrofitEventListener
+import datanapps.retrofitkotlin.services.users.model.BaseUser
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -25,7 +25,6 @@ class ApiUserRestClient {
 
     //     https://reqres.in/api/users?page=1
     fun getUserList(retrofitEventListener: RetrofitEventListener) {
-
         val retrofit = NetworkClient.retrofitClient
         mApiUser = retrofit.create<APIUser>(APIUser::class.java)
 

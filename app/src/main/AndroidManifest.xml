@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     xmlns:tools="http://schemas.android.com/tools"
-    package="datanapps.retrofitopenweatherkotlin">
+    package="datanapps.retrofitkotlin">
 
     <dist:module dist:instant="true" />
 <uses-permission android:name="android.permission.INTERNET"/>
@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".view.MainActivity">
+        <activity android:name="datanapps.retrofitkotlin.view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
