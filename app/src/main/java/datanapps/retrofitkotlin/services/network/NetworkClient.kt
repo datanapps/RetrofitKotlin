@@ -8,11 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object NetworkClient {
 
-
     private val BASE_URL = " https://reqres.in"
-
     private val TIMEOUT = 10
-
     var retrofit: Retrofit? = null
     /*
     This public static method will return Retrofit client
