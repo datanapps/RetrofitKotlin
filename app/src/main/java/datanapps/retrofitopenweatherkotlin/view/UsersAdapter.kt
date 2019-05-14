@@ -8,17 +8,14 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-
 import androidx.recyclerview.widget.RecyclerView
 import datanapps.retrofitopenweatherkotlin.R
-import datanapps.retrofitopenweatherkotlin.services.weather.model.Weather
+import datanapps.retrofitopenweatherkotlin.services.users.User
 import java.sql.Date
 import java.text.SimpleDateFormat
 
 
-class BookAdapter(private val context: Context, private val moviesList: List<Weather>) : RecyclerView.Adapter<BookAdapter.UserViewHolder>() {
+class UsersAdapter(private val context: Context, private val userList: List<User>) : RecyclerView.Adapter<UsersAdapter.UserViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val itemView = LayoutInflater.from(parent.context)
@@ -28,9 +25,9 @@ class BookAdapter(private val context: Context, private val moviesList: List<Wea
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        val album = moviesList[position]
-        holder.bookName.text = book.bookTitle
-        holder.bookAuthor.text = book.authorName
+        val user = userList[position]
+        holder.dayName.text = user.firstName
+       /* holder.bookAuthor.text = book.authorName
         holder.publishedYear.text = book.publishedYear.toString()
 
         holder.dayName.text = getAgoDateTime(album.getDt() * 1000L)
@@ -44,12 +41,12 @@ class BookAdapter(private val context: Context, private val moviesList: List<Wea
                 .with(context)
                 .load(book.bookImage)
                 .apply(RequestOptions().fitCenter())
-                .into(holder.imageCover)
+                .into(holder.imageCover)*/
 
     }
 
     override fun getItemCount(): Int {
-        return moviesList.size
+        return userList.size
     }
 
     fun getAgoDateTime(pastTimeStamp: Long): String {

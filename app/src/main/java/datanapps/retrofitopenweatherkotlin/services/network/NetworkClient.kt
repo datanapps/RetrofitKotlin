@@ -9,7 +9,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 object NetworkClient {
 
 
-    private val BASE_URL = "http://api.openweathermap.org"
+    private val BASE_URL = " https://reqres.in"
 
     private val TIMEOUT = 10
 

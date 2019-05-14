@@ -1,4 +1,4 @@
-package datanapps.retrofitopenweatherkotlin.services.weather.model
+package datanapps.retrofitopenweatherkotlin.services.users.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

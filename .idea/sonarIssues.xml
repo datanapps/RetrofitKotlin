@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="/a.dummy">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="/fragment.java">
           <value>
             <set />
@@ -68,6 +73,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/APIWeather.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/model/Weather.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/weather/APIWeather.java">
           <value>
             <set />
@@ -84,6 +99,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/weather/ApiWeatherRestClient.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/weather/BaseUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/weather/Datum.java">
           <value>
             <set />
           </value>
@@ -158,7 +183,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/view/UsersAdapter.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/layout_list_forecast.xml">
           <value>
             <set />
           </value>

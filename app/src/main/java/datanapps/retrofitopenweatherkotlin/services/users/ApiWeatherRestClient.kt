@@ -1,14 +1,12 @@
-package datanapps.retrofitopenweatherkotlin.services.weather
+package datanapps.retrofitopenweatherkotlin.services.users
 
 import java.util.HashMap
 
 import datanapps.retrofitopenweatherkotlin.services.network.NetworkClient
 import datanapps.retrofitopenweatherkotlin.services.network.RetrofitEventListener
-import datanapps.retrofitopenweatherkotlin.services.weather.model.WeatherFarecast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
 
 
 class ApiWeatherRestClient {
@@ -32,30 +30,28 @@ class ApiWeatherRestClient {
         val retrofit = NetworkClient.retrofitClient
         mApiWeather = retrofit.create<APIWeather>(APIWeather::class.java)
 
-        //     https://api.openweathermap.org/data/2.5/forecast?q=Robertsganj,in&appid=573ace94d18a7441b7237118bf789162&cnt=5&units=metric
+        //     https://reqres.in/api/users?page=1
 
         val data = HashMap<String, String>()
-        data["q"] = "$indianCityName,IN"
-        data["appid"] = API_KEY
-        data["units"] = "metric"
-        data["cnt"] = "15"
+        data["page"] = "1"
 
 
-        val apiWeatherCall = mApiWeather!!.getWeatherByCityName5Days(data)
+
+        val apiWeatherCall = mApiWeather!!.getUserList(data)
         /*
         This is the line which actually sends a network request. Calling enqueue() executes a call asynchronously. It has two callback listeners which will invoked on the main thread
         */
 
-        apiWeatherCall.enqueue(object : Callback<WeatherFarecast> {
+        apiWeatherCall.enqueue(object : Callback<BaseUser> {
 
-            override fun onResponse(call: Call<WeatherFarecast>?, response: Response<WeatherFarecast>?) {
+            override fun onResponse(call: Call<BaseUser>?, response: Response<BaseUser>?) {
                 /*This is the success callback. Though the response type is JSON, with Retrofit we get the response in the form of WResponse POJO class
                  */
                 if (response?.body() != null) {
                     retrofitEventListener.onSuccess(call, response?.body())
                 }
             }
-            override fun onFailure(call: Call<WeatherFarecast>?, t: Throwable?) {
+            override fun onFailure(call: Call<BaseUser>?, t: Throwable?) {
                 /*
                 Error callback
                 */

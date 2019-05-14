@@ -1,4 +1,4 @@
-package datanapps.retrofitopenweatherkotlin.services.weather.model
+package datanapps.retrofitopenweatherkotlin.services.users.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
@@ -16,7 +16,7 @@ class WeatherFarecast {
     var cnt: Long? = null
     @SerializedName("list")
     @Expose
-    var list: List<datanapps.retrofitopenweatherkotlin.services.weather.model.List<Any?>>? = null
+    var list: List<datanapps.retrofitopenweatherkotlin.services.users.model.List<Any?>>? = null
     @SerializedName("city")
     @Expose
     var city: City? = null

@@ -5,38 +5,34 @@ import datanapps.retrofitopenweatherkotlin.R
 
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import datanapps.retrofitopenweatherkotlin.services.network.RetrofitEventListener
-import datanapps.retrofitopenweatherkotlin.services.weather.ApiWeatherRestClient
-import datanapps.retrofitopenweatherkotlin.services.weather.model.WeatherFarecast
+import datanapps.retrofitopenweatherkotlin.services.users.ApiWeatherRestClient
+import datanapps.retrofitopenweatherkotlin.services.users.BaseUser
+import datanapps.retrofitopenweatherkotlin.services.users.User
 import retrofit2.Call
 
 class MainActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setRecycleViewList()
+
+        callUserListData();
     }
 
-
-    private fun setRecycleViewList() {
-       /* val recyclerView = findViewById<RecyclerView>(R.id.recycle_view_book)
-        val mAdapter = BooksAdapter(this@MainActivity, bookList)
-        val mLayoutManager = LinearLayoutManager(applicationContext)
-        recyclerView.layoutManager = mLayoutManager
-        recyclerView.itemAnimator = DefaultItemAnimator()
-        recyclerView.adapter = mAdapter*/
-    }
-
-
-    internal fun uploadWeatherData() {
+    internal fun callUserListData() {
         //showProgressDialog("Wait...");
         ApiWeatherRestClient.instance.getWeather(title.toString(), object : RetrofitEventListener {
             override  fun onSuccess(call: Call<*>, response: Any) {
-                if (response is WeatherFarecast) {
-                    Log.d("asd", "-----" + response.list)
+                if (response is BaseUser) {
+                    Log.d("asd", "-----" + response.data.size)
                    // weatherAdapter.setAlbumList((response as WeatherFarecast).list)
+                    setRecycleViewList(response.data);
                 }
             }
 
@@ -45,5 +41,15 @@ class MainActivity : AppCompatActivity() {
                 // snack bar that city can not find
             }
         })
+    }
+
+
+    private fun setRecycleViewList(userList: List<User>) {
+        val recyclerView = findViewById<RecyclerView>(R.id.recycle_view_book)
+        val mAdapter = UsersAdapter(this@MainActivity, userList)
+        val mLayoutManager = LinearLayoutManager(applicationContext)
+        recyclerView.layoutManager = mLayoutManager
+        recyclerView.itemAnimator = DefaultItemAnimator()
+        recyclerView.adapter = mAdapter
     }
 }
