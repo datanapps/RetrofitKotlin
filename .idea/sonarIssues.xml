@@ -73,7 +73,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/APIUser.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/APIWeather.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/ApiUserRestClient.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/model/BaseUser.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/model/BaseUser.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/datanapps/retrofitopenweatherkotlin/services/users/model/User.kt">
           <value>
             <set />
           </value>

@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import datanapps.retrofitopenweatherkotlin.services.network.RetrofitEventListener
-import datanapps.retrofitopenweatherkotlin.services.users.ApiWeatherRestClient
-import datanapps.retrofitopenweatherkotlin.services.users.BaseUser
-import datanapps.retrofitopenweatherkotlin.services.users.User
+import datanapps.retrofitopenweatherkotlin.services.users.ApiUserRestClient
+import datanapps.retrofitopenweatherkotlin.services.users.model.BaseUser
+import datanapps.retrofitopenweatherkotlin.services.users.model.User
 import retrofit2.Call
 
 class MainActivity : AppCompatActivity() {
@@ -26,18 +26,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     internal fun callUserListData() {
-        //showProgressDialog("Wait...");
-        ApiWeatherRestClient.instance.getWeather(title.toString(), object : RetrofitEventListener {
+
+        ApiUserRestClient.instance.getUserList(title.toString(), object : RetrofitEventListener {
             override  fun onSuccess(call: Call<*>, response: Any) {
                 if (response is BaseUser) {
-                    Log.d("asd", "-----" + response.data.size)
-                   // weatherAdapter.setAlbumList((response as WeatherFarecast).list)
-                    setRecycleViewList(response.data);
+                    Log.d("asd", "-----" + response.data!!.size)
+                    setRecycleViewList(response.data!!);
                 }
             }
 
             override fun onError(call: Call<*>, t: Throwable) {
-
                 // snack bar that city can not find
             }
         })

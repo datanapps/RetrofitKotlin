@@ -10,7 +10,7 @@ import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
 import datanapps.retrofitopenweatherkotlin.R
-import datanapps.retrofitopenweatherkotlin.services.users.User
+import datanapps.retrofitopenweatherkotlin.services.users.model.User
 import java.sql.Date
 import java.text.SimpleDateFormat
 
@@ -35,7 +35,7 @@ class UsersAdapter(private val context: Context, private val userList: List<User
         holder.tvMaxTemp.setText(album.getMain().getTempMax() + "\u2103")
         holder.tvMinTemp.setText(album.getMain().getTempMin() + "\u2103")
 
-        holder.tvWeatherDetail.setText(album.getWeather().get(0).getDescription())
+        holder.tvWeatherDetail.setText(album.getUserList().get(0).getDescription())
 
         Glide
                 .with(context)

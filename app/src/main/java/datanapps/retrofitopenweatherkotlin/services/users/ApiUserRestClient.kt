@@ -4,31 +4,32 @@ import java.util.HashMap
 
 import datanapps.retrofitopenweatherkotlin.services.network.NetworkClient
 import datanapps.retrofitopenweatherkotlin.services.network.RetrofitEventListener
+import datanapps.retrofitopenweatherkotlin.services.users.model.BaseUser
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class ApiWeatherRestClient {
+class ApiUserRestClient {
 
 
     companion object {
-        val instance = ApiWeatherRestClient()
+        val instance = ApiUserRestClient()
         private val API_KEY = "573ace94d18a7441b7237118bf789162"
     }
 
-    private var mApiWeather: APIWeather? = null
+    private var mApiWeather: APIUser? = null
 
     /**
-     * Invoke getWeather via [Call] request.
+     * Invoke getUserList via [Call] request.
      *
      * @param indianCityName of City.
      * @param retrofitEventListener of RetrofitEventListener.
      */
-    fun getWeather(indianCityName: String, retrofitEventListener: RetrofitEventListener) {
+    fun getUserList(indianCityName: String, retrofitEventListener: RetrofitEventListener) {
 
         val retrofit = NetworkClient.retrofitClient
-        mApiWeather = retrofit.create<APIWeather>(APIWeather::class.java)
+        mApiWeather = retrofit.create<APIUser>(APIUser::class.java)
 
         //     https://reqres.in/api/users?page=1
 
