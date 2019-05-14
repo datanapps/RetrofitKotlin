@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     internal fun callUserListData() {
 
-        ApiUserRestClient.instance.getUserList(title.toString(), object : RetrofitEventListener {
+        ApiUserRestClient.instance.getUserList( object : RetrofitEventListener {
             override  fun onSuccess(call: Call<*>, response: Any) {
                 if (response is BaseUser) {
                     Log.d("asd", "-----" + response.data!!.size)
