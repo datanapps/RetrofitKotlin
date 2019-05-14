@@ -1,11 +1,12 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.dynatrace.tools.android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
 
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "colorpicker.datanapps.retrofitopenweatherkotlin"
+        applicationId "datanapps.retrofitopenweatherkotlin"
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 1
@@ -22,16 +23,33 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha05'
+
+
+    // app compact
+    implementation "androidx.appcompat:appcompat:1.1.0-alpha05"
+
+    // constraint layout
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    // recycle view
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
+
+    // glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    // gson convertor
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    androidTestImplementation 'androidx.test:runner:1.2.0-beta01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-beta01'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
-dynatrace {
-    defaultConfig {
-        applicationId '4b6e337f-c9c8-4d07-be3a-9105a0416764'
-        beaconURL 'https://bf66267aqc.bf.dynatrace.com/mbeacon'
-        agentProperties 'DTXLogLevel': 'debug'
-    }
+repositories {
+    mavenCentral()
 }
