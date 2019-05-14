@@ -9,6 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import datanapps.retrofitopenweatherkotlin.R
 import datanapps.retrofitopenweatherkotlin.services.users.model.User
 import java.sql.Date
@@ -19,29 +21,19 @@ class UsersAdapter(private val context: Context, private val userList: List<User
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val itemView = LayoutInflater.from(parent.context)
-                .inflate(R.layout.layout_list_forecast, parent, false)
+                .inflate(R.layout.layout_list_user, parent, false)
 
         return UserViewHolder(itemView)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = userList[position]
-        holder.dayName.text = user.firstName
-       /* holder.bookAuthor.text = book.authorName
-        holder.publishedYear.text = book.publishedYear.toString()
-
-        holder.dayName.text = getAgoDateTime(album.getDt() * 1000L)
-
-        holder.tvMaxTemp.setText(album.getMain().getTempMax() + "\u2103")
-        holder.tvMinTemp.setText(album.getMain().getTempMin() + "\u2103")
-
-        holder.tvWeatherDetail.setText(album.getUserList().get(0).getDescription())
-
-        Glide
-                .with(context)
-                .load(book.bookImage)
+        holder.userName.text = user.firstName +" "+ user.lastName
+        holder.userEmail.text = user.email
+          Glide.with(context)
+                .load(user.avatar)
                 .apply(RequestOptions().fitCenter())
-                .into(holder.imageCover)*/
+                .into(holder.userIcon)
 
     }
 
@@ -49,38 +41,15 @@ class UsersAdapter(private val context: Context, private val userList: List<User
         return userList.size
     }
 
-    fun getAgoDateTime(pastTimeStamp: Long): String {
-
-        var strDate = ""
-        if (DateUtils.isToday(pastTimeStamp)) {
-
-            strDate = "Today, " + SimpleDateFormat("hh:mm aa").format(Date(pastTimeStamp))
-        } else if (DateUtils.isToday(pastTimeStamp + DateUtils.DAY_IN_MILLIS)) {
-            strDate = "Yesterday, " + SimpleDateFormat("hh:mm aa").format(Date(pastTimeStamp))
-        } else {
-
-            strDate = SimpleDateFormat("EEEE, hh:mm aa").format(Date(pastTimeStamp))
-
-        }
-
-
-        return strDate
-    }
-
     inner class UserViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-        var dayName: TextView
-         var tvMaxTemp: TextView
-         var tvMinTemp: TextView
-         var tvWeatherDetail: TextView
-         var weatherIcon: ImageView
+        var userName: TextView
+         var userEmail: TextView
+         var userIcon: ImageView
 
         init {
-            dayName = view.findViewById(R.id.layout_list_forcast_day_name)
-            tvMaxTemp = view.findViewById(R.id.layout_list_forcast_tv_max)
-            tvMinTemp = view.findViewById(R.id.layout_list_forcast_tv_min)
-            tvWeatherDetail = view.findViewById(R.id.layout_list_forcast_weather_detail)
-            weatherIcon = view.findViewById(R.id.layout_list_forcast_weather_icon)
+            userName = view.findViewById(R.id.layout_list_user_day_name)
+            userEmail = view.findViewById(R.id.layout_list_user_email)
+            userIcon = view.findViewById(R.id.layout_list_user_icon)
 
         }
     }

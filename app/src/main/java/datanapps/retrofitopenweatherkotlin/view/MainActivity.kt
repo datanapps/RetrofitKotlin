@@ -16,12 +16,9 @@ import retrofit2.Call
 
 class MainActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         callUserListData();
     }
 
@@ -40,7 +37,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
 
     private fun setRecycleViewList(userList: List<User>) {
         val recyclerView = findViewById<RecyclerView>(R.id.recycle_view_book)
