@@ -15,10 +15,9 @@ InSide Sample :
 ## API :  https://reqres.in/api/users?page=1
 
 <p align="center">
-  <img width="350" height="600" src="https://github.com/datanapps/RetrofitKotlin/blob/master/screens/screen_1.png">
+  <img width="330" height="600" src="https://github.com/datanapps/RetrofitKotlin/blob/master/screens/screen_1.png">
 </p>
 
-![alt text](https://github.com/datanapps/RetrofitKotlin/blob/master/screens/screen_1.png)
 
 
 ### 1. All dependencies :
