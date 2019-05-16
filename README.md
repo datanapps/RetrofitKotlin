@@ -18,7 +18,7 @@ InSide Sample :
 ![alt text](https://github.com/datanapps/RetrofitKotlin/blob/master/screens/screen_1.png)
 
 
-## 1. All dependencies :
+### 1. All dependencies :
 
         dependencies {
             implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -50,7 +50,7 @@ InSide Sample :
           }
           
           
-## 2. Retrofit Network Client:
+### 2. Retrofit Network Client:
 
  object NetworkClient{
 
@@ -78,7 +78,7 @@ InSide Sample :
 
      }
 
-## 3. API End User
+### 3. API End User
 
         /**
          * API for getting weather from https://darksky.net/
@@ -89,7 +89,7 @@ InSide Sample :
             fun getUserList(@QueryMap options: Map<String, String>): Call<BaseUser>
         }
         
-## 4. Now Hit API 
+### 4. Now Hit API 
 
 
     val retrofit = NetworkClient.retrofitClient
