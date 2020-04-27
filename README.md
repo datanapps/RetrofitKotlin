@@ -15,7 +15,7 @@ InSide Sample :
 ## API :  https://reqres.in/api/users?page=1
 
 <p align="center">
-  <img width="330" height="600" src="https://github.com/datanapps/RetrofitKotlin/blob/master/screens/screen_1.png">
+  <img width="300" height="600" src="https://github.com/datanapps/RetrofitKotlin/blob/master/screens/screen_1.png">
 </p>
 
 
@@ -122,4 +122,17 @@ InSide Sample :
             }
         })
 
+
+
+
+[![See](https://datanapps.com/public/dnarestapi/buy/buy_coffee1.png)](https://www.paypal.me/datanappspaynow)
+
+  ### License
+
+Copyright [2020] [datanapps]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+   http://www.apache.org/licenses/LICENSE-2.0
 
